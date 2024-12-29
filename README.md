@@ -5,7 +5,7 @@ Welcome to the Eat Safe, Love project! This repository demonstrates the process 
 **Part 1: Database and Jupyter Notebook Setup**
 
 1.	Database Import: The dataset provided in establishments.json was imported into MongoDB using the following command:
-! mongoimport --type json -d uk_food -c establishments --drop --jsonArray ../Starter_Code/Resources/establishments.json
+! mongoimport --type json -d uk_food -c establishments --drop --jsonArray ../nosql-challenge/Resources/establishments.json
 This creates the uk_food database and the establishments collection, ensuring a fresh start by dropping any existing collection with the same name.
 2.	Initial Setup: The MongoDB Python driver (pymongo) was used to connect to the database, validate its creation, and review the imported data.
    
@@ -14,7 +14,8 @@ This creates the uk_food database and the establishments collection, ensuring a 
 2.	Assigning Correct Business Type ID: The BusinessTypeID for "Restaurant/Cafe/Canteen" was identified and updated for "Penang Flavours."
 3.	Cleaning Data: Establishments within the "Dover" local authority were identified, counted, and removed, ensuring data relevance.
 4.	Data Type Corrections: String values for longitude, latitude, and RatingValue were converted to appropriate numerical types for accurate analysis. Non-numerical rating values were set to null for consistency.
-Notes
+   
+**Notes**
 •	Geospatial Fields: Geolocation fields (longitude and latitude) were converted to decimals for precise querying.
 •	Ratings: Invalid or pending ratings were normalized for clarity in downstream analysis.
 This README serves as a guide for setting up and replicating the process, ensuring data accuracy and readiness for exploratory or operational use.
